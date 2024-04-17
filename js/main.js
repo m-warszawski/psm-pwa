@@ -6,3 +6,9 @@ window.onload = () => {
              .register('./sw.js');
   }
 }
+
+function sosVibration() {
+  navigator.vibrate([ 
+    30,30,30,100,100,100,30,30,30
+  ]);
+}

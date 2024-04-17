@@ -6,8 +6,8 @@
   <link rel="manifest" href="/manifest.json">
   <link rel="stylesheet" href="css/style.css">
   <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="images/hello-icon-152.png">
-  <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
+  <!-- <link rel="apple-touch-icon" href="images/hello-icon-152.png"> -->
+  <!-- <link rel = "stylesheet" href = "http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" /> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="white"/>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -21,7 +21,22 @@
   <div class="container">
     <h1 class="title">Hello World!</h1>
   </div>
-  <div id = "sample" style = "width:900px; height:580px;"></div>
+  <div>
+    <button type="button" onclick="sosVibration()">Sos!</button>
+  </div>
+  <div class="container" id = "sample" style = "width:900px; height:580px;"></div>
+  <script>
+    var mapOptions = {
+       center: [50.06914, 19.95470],
+       zoom: 10
+    }
+    
+    var map = new L.map('map', mapOptions);
+    
+    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+    
+    map.addLayer(layer);
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
