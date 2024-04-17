@@ -8,45 +8,46 @@ window.onload = () => {
 }
 
 // SOS
-function sosVibration() {
+ function sosVibration() {
+window.navigator.vibrate([600,600,600,600,600,600,1500,600,1500,600,1500,600,600,600,600,600,600]);
+}
 
-  setTimeout(window.navigator.vibrate(2000), 1500);
-  setTimeout(window.navigator.vibrate(2000), 1500);
-  setTimeout(window.navigator.vibrate(2000), 1500);
+//map
+function  renderMap(){
+  var mapOptions = {
+    center: [50.049683, 19.944544],
+    zoom: 10
+  }
+  
+  // Creating a map object
+  var map = new L.map('map', mapOptions);
+  
+  // Creating a Layer object
+  var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+  
+  // Adding layer to the map
+  map.addLayer(layer);
 
-  setTimeout(window.navigator.vibrate(6000), 1500);
-  setTimeout(window.navigator.vibrate(6000), 1500);
-  setTimeout(window.navigator.vibrate(6000), 1500);
+  // Function to update map location
+  function onLocationFound(e) {
+    var radius = e.accuracy / 2;
 
-  setTimeout(window.navigator.vibrate(2000), 1500);
-  setTimeout(window.navigator.vibrate(2000), 1500);
-  setTimeout(window.navigator.vibrate(2000), 1500);
+    var locationMarker = L.marker(e.latlng).addTo(map)
+        .bindPopup("You are somewhere within this circle").openPopup();
 
+    var locationCircle = L.circle(e.latlng, radius).addTo(map);
+    map.setView(e.latlng, 13); // Zoom closer
+    }
+
+  function onLocationError(e) {
+    alert(e.message);
+  }
+
+  map.on('locationerror', onLocationError);
+  map.on('locationfound', onLocationFound);
+
+  // Request user's location
+  map.locate({setView: true, maxZoom: 16});
 }
 
 
-// MAP
-var mapOptions = {
-  center: [50.06914, 19.95470],
-  zoom: 15
-}
-
-var map = new L.map('area', mapOptions);
-
-var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-
-map.addLayer(layer);
-console.log(location)
-
-var markerOptions = {
-  title: "MyLocation",
-  clickable: true,
-  draggable: true,
-}
-var marker = L.marker([17.438139, 78.395830], markerOptions);
-         
-         // Adding popup to the marker
-marker.bindPopup('Hi welcome to Tutorialspoint').openPopup();
-         
-         // Adding marker to the map
-marker.addTo(map);
