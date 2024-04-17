@@ -64,37 +64,7 @@
     </div>
   </footer>
   <script>
-    function getLocation() {
-      if (window.navigator.geolocation) {
-        window.navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        console.log("Geo Location not supported by browser");
-      }
-    }//function that retrieves the position
-    function showPosition(position) {
-      var location = {
-        latitude: position.coords.latitude,
-        longitude: position.coords.longitude,
-      }
-      console.log(location)
-    }//request for location
-    getLocation();
-    var mapOptions = {
-      center: [position.coords.latitude, position.coords.longitude],
-      zoom: 10
-    }
 
-    var map = new L.map('area', mapOptions);
-
-    var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
-
-    map.addLayer(layer);
-    var marker = new khtml.maplib.overlay.Marker({
-      position: new khtml.maplib.LatLng(position.coords.latitude, position.coords.longitude),
-      map: map,
-      title: "your location"
-    });
-    console.log(location)
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
