@@ -8,41 +8,18 @@ window.onload = () => {
 }
 
 function sosVibration() {
-  window.navigator.vibrate([ 
-    500
-  ]);
-  setTimeout(500);
-  window.navigator.vibrate([ 
-    500
-  ]);
-  setTimeout(500);
-  window.navigator.vibrate([ 
-    500
-  ]);
-  setTimeout(500);
-  window.navigator.vibrate([ 
-    1500
-  ]);
-  setTimeout(500)
-  window.navigator.vibrate([ 
-    1500
-  ]);
-  setTimeout(500)
-  window.navigator.vibrate([ 
-    1500
-  ]);
-  setTimeout(500)
-  window.navigator.vibrate([ 
-    500
-  ]);
-  setTimeout(500);
-  window.navigator.vibrate([ 
-    500
-  ]);
-  setTimeout(500);
-  window.navigator.vibrate([ 
-    500
-  ]);
+  
+  setTimeout(window.navigator.vibrate(2000),1500);
+  setTimeout(window.navigator.vibrate(2000),1500);
+  setTimeout(window.navigator.vibrate(2000),1500);
+
+  setTimeout(window.navigator.vibrate(6000),1500);
+  setTimeout(window.navigator.vibrate(6000),1500);
+  setTimeout(window.navigator.vibrate(6000),1500);
+
+  setTimeout(window.navigator.vibrate(2000),1500);
+  setTimeout(window.navigator.vibrate(2000),1500);
+  setTimeout(window.navigator.vibrate(2000),1500);
   
 }
 

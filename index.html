@@ -32,7 +32,7 @@
         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse ml-auto" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" href="#sos">SOS</a>
@@ -57,23 +57,43 @@
     </section>
   </main>
 
+  <footer id="footer" class="container-fluid bg-dark ">
+    <div class="row">
+      <h6>Warszawski - Małucha - Malichenko &copy; 2024</h6>
+    </div>
+  </footer>
   <script>
-        var mapOptions = {
-          center: [10, 10],
-          zoom: 10
-        }
+    function getLocation() {
+      if(window.navigator.geolocation) {
+        window.navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        console.log("Geo Location not supported by browser");
+      }
+    }//function that retrieves the position
+    function showPosition(position) {
+      var location = {
+        latitude: position.coords.latitude,
+        longitude: position.coords.longitude,
+      }
+      console.log(location)
+    }//request for location
+    getLocation();
+    var mapOptions = {
+        center: [position.coords.latitude, position.coords.longitude],
+        zoom: 10
+    }
 
-        var map = new L.map('area', mapOptions);
+      var map = new L.map('area', mapOptions);
 
-        var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+      var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
-        map.addLayer(layer);
-        if ( navigator.geolocation ) { 
-    
-        navigator.geolocation.getCurrentPosition(position => {
-          var
-        });
-} 
+      map.addLayer(layer);
+      var marker = new khtml.maplib.overlay.Marker({
+        position: new khtml.maplib.LatLng(position.coords.latitude, position.coords.longitude),
+        map: map,
+        title: "your location"
+      });
+      console.log(location)
   </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
