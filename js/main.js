@@ -8,7 +8,7 @@ window.onload = () => {
 }
 
 function sosVibration() {
-  navigator.vibrate([ 
+  window.navigator.vibrate([ 
     30,30,30,100,100,100,30,30,30
   ]);
 }
