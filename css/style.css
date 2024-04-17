@@ -1,12 +1,25 @@
 body{
-  background-color: grey;
+  background-color: lightgrey !important;
+}
+
+section{
+  border-bottom: 1px solid black;
+}
+
+h2{
+  text-align: center;
+  padding: 20px 0px;
 }
 
 #sos{
-  height: 25vw;
+  height: 500px;
+  margin-top: 20px;
 }
 
 #sos button{
   width: 150px;
-
+  height: 50px;
+  border: 1px solid black;
+  color: black;
+  margin: 0 auto;
 }

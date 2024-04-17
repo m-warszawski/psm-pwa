@@ -9,39 +9,39 @@ window.onload = () => {
 
 function sosVibration() {
   window.navigator.vibrate([ 
-    200
+    500
   ]);
-  setTimeout(150);
+  setTimeout(500);
   window.navigator.vibrate([ 
-    200
+    500
   ]);
-  setTimeout(150);
+  setTimeout(500);
   window.navigator.vibrate([ 
-    200
+    500
   ]);
-  setTimeout(150);
+  setTimeout(500);
   window.navigator.vibrate([ 
-    600
+    1500
   ]);
-  setTimeout(300)
+  setTimeout(500)
   window.navigator.vibrate([ 
-    600
+    1500
   ]);
-  setTimeout(300)
+  setTimeout(500)
   window.navigator.vibrate([ 
-    600
+    1500
   ]);
-  setTimeout(300)
+  setTimeout(500)
   window.navigator.vibrate([ 
-    200
+    500
   ]);
-  setTimeout(150);
+  setTimeout(500);
   window.navigator.vibrate([ 
-    200
+    500
   ]);
-  setTimeout(150);
+  setTimeout(500);
   window.navigator.vibrate([ 
-    200
+    500
   ]);
   
 }
