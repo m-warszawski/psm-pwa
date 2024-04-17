@@ -24,7 +24,13 @@ h2 {
   margin: 0 auto;
 }
 
+#sos p{
+  margin-top: -60px;
+  text-align: center;
+}
+
 #map {
+  padding-top: 20px;
   padding-bottom: 40px;
 }
 
