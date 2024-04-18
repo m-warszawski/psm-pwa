@@ -12,6 +12,7 @@ function sosVibration() {
   window.navigator.vibrate([600, 600, 600, 600, 600, 600, 1500, 600, 1500, 600, 1500, 600, 600, 600, 600, 600, 600]);
 }
 
+
 // MAP
 function renderMap() {
   var mapOptions = {
@@ -23,7 +24,7 @@ function renderMap() {
   var map = new L.map('area', mapOptions);
 
   // Creating a Layer object
-  var layer = new L.TileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
+  var layer = new L.TileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png');
 
   // Adding layer to the map
   map.addLayer(layer);

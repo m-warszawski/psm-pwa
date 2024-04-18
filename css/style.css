@@ -2,6 +2,23 @@ body {
   background-color: lightgrey !important;
 }
 
+.navbar-brand{
+  width: 200px;
+  text-align: center;
+}
+
+.nav-item{
+  width: 100px;
+}
+
+.nav-link{
+  text-align: center;
+}
+
+.nav-item:hover{
+  background-color: #32383e;
+}
+
 section {
   border-bottom: 1px solid black;
 }
@@ -52,4 +69,14 @@ footer {
 footer h6 {
   text-align: center;
   color: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .navbar-brand{
+    width: auto;
+  }
+  .nav-item{
+    text-align: center;
+    width: auto;
+  }
 }
