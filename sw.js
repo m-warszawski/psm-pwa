@@ -3,12 +3,8 @@ var filesToCache = [
   '/',
   '/index.html',
   '/css/style.css',
-  '/css/leaflet.css',
   '/images/icon.png'
   '/js/main.js',
-  '/js/leaflet.js',
-  '/js/images/marker-icon-2x.png'
-  '/js/images/marker-shadow.png',
 ];
 
 /* Start the service worker and cache all of the app's content */
